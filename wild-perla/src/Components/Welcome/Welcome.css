@@ -1,0 +1,15 @@
+#welcomeContent {
+    text-align: center;
+    margin-top: 5em;
+    margin-bottom: 5em
+}
+
+.content h1 {
+    margin-bottom: 1.5em;
+    letter-spacing: .4em
+}
+
+h5 {
+    margin-top: 1.2em;
+    letter-spacing: .2em
+}
