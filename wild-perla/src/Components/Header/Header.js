@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, NavbarBrand, NavbarItem, Icon, NavbarMenu, NavbarEnd, NavbarBurger } from 'bloomer';
+import { Navbar, NavbarBrand, NavbarItem, Icon, Image, NavbarMenu, NavbarEnd, NavbarBurger } from 'bloomer';
 import './Header.css';
 
 class Header extends React.Component  {
@@ -22,9 +22,14 @@ class Header extends React.Component  {
 
     <Navbar>
 
+        <div className="navWrapper">
         <NavbarBrand>
-            <NavbarItem>
-                <Icon className='fas fa-chevron-left'/> <strong> MG </strong> <Icon className='fas fa-chevron-right' />
+            <NavbarItem isHidden="touch">
+                <Image src="/images/WP_logo.png" />
+            </NavbarItem>
+
+            <NavbarItem isHidden="desktop">
+                <Image src="/images/WP_logo_small.png" />
             </NavbarItem>
 
             {/* Burger Nav menu on mobile */}
@@ -33,13 +38,13 @@ class Header extends React.Component  {
         </NavbarBrand>
 
         <NavbarMenu isActive={this.state.isActive} onClick={this.clicky} className="mobileMenu">
-   
+
             <NavbarItem className="mobileItem">About</NavbarItem>
             <NavbarItem className="mobileItem">Shop</NavbarItem>
             <NavbarItem className="mobileItem">Contact</NavbarItem>
 
         </NavbarMenu>   
-
+        </div>
             {/* Facebook/Instagram links */}
             <NavbarEnd>
                 <NavbarItem href="https://www.facebook.com/wildperla/" target="_blank" isHidden='touch'>
