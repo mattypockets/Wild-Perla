@@ -1,5 +1,6 @@
 import React from "react";
 import { Navbar, NavbarBrand, NavbarItem, Icon, Image, NavbarMenu, NavbarEnd, NavbarBurger } from 'bloomer';
+import { Link } from 'react-router-dom';
 import './Header.css';
 
 class Header extends React.Component  {
@@ -25,11 +26,11 @@ class Header extends React.Component  {
         <div className="navWrapper">
         <NavbarBrand>
             <NavbarItem isHidden="touch">
-                <Image src="/images/WP_logo.png" />
+                <Link to='/'><Image src="/images/WP_logo.png" /></Link>
             </NavbarItem>
 
             <NavbarItem isHidden="desktop">
-                <Image src="/images/WP_logo_small.png" />
+                <Link to='/'><Image src="/images/WP_logo_small.png" /></Link>
             </NavbarItem>
 
             {/* Burger Nav menu on mobile */}
@@ -39,9 +40,9 @@ class Header extends React.Component  {
 
         <NavbarMenu isActive={this.state.isActive} onClick={this.clicky} className="mobileMenu">
 
-            <NavbarItem className="mobileItem">About</NavbarItem>
-            <NavbarItem className="mobileItem">Shop</NavbarItem>
-            <NavbarItem className="mobileItem">Contact</NavbarItem>
+            <NavbarItem className="mobileItem"><Link to='/about/'>About</Link></NavbarItem>
+            <NavbarItem className="mobileItem" href='https://www.etsy.com/Shop/WildPerla' target='_blank'>Shop</NavbarItem>
+            <NavbarItem className="mobileItem"><Link to='/contact/'>Contact</Link></NavbarItem>
 
         </NavbarMenu>   
         </div>

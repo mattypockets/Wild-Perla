@@ -1,8 +1,8 @@
 import React from "react";
-import { Section, Columns, Column, Content, Title, Field, FieldLabel, FieldBody, Input, Control, Button, Label, TextArea } from "bloomer";
+import { Columns, Column, Content, Container, Footer, Icon } from "bloomer";
 import "./Footer.css";
 
-const Footer = () => (
+const Foot = () => (
     <div>
         <Footer id='footer'>
             <Container>
@@ -24,4 +24,4 @@ const Footer = () => (
     </div>
 )
 
-export default Footer;
+export default Foot;
