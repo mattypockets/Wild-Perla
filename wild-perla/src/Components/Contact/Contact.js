@@ -1,5 +1,5 @@
 import React from "react";
-import { Section, Columns, Column, Content, Title, Field, FieldLabel, FieldBody, Input, Control, Button, Label, TextArea } from "bloomer";
+import { Section, Columns, Column, Content, Field, FieldLabel, FieldBody, Input, Control, Button, Label, TextArea } from "bloomer";
 import "./Contact.css";
 
 const Contact = () => (
