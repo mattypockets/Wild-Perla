@@ -10,7 +10,7 @@
     <meta name="theme-color" content="#000000" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
     <link rel="stylesheet" href="cdn.materialdesignicons.com/3.2.89/css/materialdesignicons.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    
     <!--
       manifest.json provides metadata used when your web app is added to the
       homescreen on Android. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -41,4 +41,18 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+  <script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDqLhK70leZ-2OtzekoSupWgZgKMOPNL1w",
+    authDomain: "wildperlareacttest.firebaseapp.com",
+    databaseURL: "https://wildperlareacttest.firebaseio.com",
+    projectId: "wildperlareacttest",
+    storageBucket: "wildperlareacttest.appspot.com",
+    messagingSenderId: "179930986408"
+  };
+  firebase.initializeApp(config);
+</script>
+<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
 </html>

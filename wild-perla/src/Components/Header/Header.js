@@ -49,7 +49,7 @@ class Header extends React.Component  {
             {/* Facebook/Instagram links */}
             <NavbarEnd>
                 <NavbarItem href="https://www.facebook.com/wildperla/" target="_blank" isHidden='touch'>
-                    <Icon className='fab fa-facebook-f' />
+                    <Icon className='fab fa-facebook-f navIcon' />
                 </NavbarItem>
                 <NavbarItem href="http://instagram.com/wildperla" target="_blank" isHidden='touch'>
                     <Icon className='fab fa-instagram' />
