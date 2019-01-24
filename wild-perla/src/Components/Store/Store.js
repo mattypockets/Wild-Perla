@@ -25,9 +25,17 @@ class Store extends React.Component {
         return(
         <ul>
             {this.state.items.map(item=> (
-                <li key={item.title}>
+                <div>
+                <li>
                     {item.title}
                 </li>
+                <li>
+                    <p>{item.description}</p>
+                </li>
+                <li>
+                    <a href={item.url}>Link</a>
+                </li>
+                </div>
             ))}
         </ul>
         )
