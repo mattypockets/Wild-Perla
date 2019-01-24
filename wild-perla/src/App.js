@@ -4,6 +4,7 @@ import Welcome from './Components/Welcome';
 import About from './Components/About';
 import Contact from './Components/Contact';
 import Foot from './Components/Footer';
+import Store from './Components/Store';
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
 
@@ -16,6 +17,7 @@ class App extends Component {
           <Route exact path='/' component={ Welcome } />
           <Route path='/about/' component={ About } />
           <Route path='/contact/' component={ Contact } />
+          <Store />
           <Foot />
         </div>
       </Router> 
