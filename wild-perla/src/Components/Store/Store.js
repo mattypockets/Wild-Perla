@@ -11,8 +11,11 @@ class Store extends React.Component {
         };
     }
 
+    
+
     componentDidMount() {
-        axios.get('https://openapi.etsy.com/v2/shops/WildPerla/listings/active?api_key=7aqood14ck041vywdymjg35w', {crossdomain: true})
+        const api_key = process.env.REACT_APP_API_KEY;
+        axios.get('https://cors-anywhere.herokuapp.com/https://openapi.etsy.com/v2/shops/WildPerla/listings/active?api_key='+api_key)
             .then(res=> {
                 const items = res.data.results;
                 this.setState({items})
