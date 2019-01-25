@@ -1,5 +1,7 @@
 import React from "react";
 import axios from 'axios';
+import { Section, Columns } from 'bloomer';
+import ItemCard from '../ItemCard';
 
 class Store extends React.Component {
     constructor(props) {
@@ -32,6 +34,7 @@ class Store extends React.Component {
                         <Columns>
                             {this.state.items.map(item => (
                                 <ItemCard 
+                                    key = {item.listing_id}
                                     id = {item.listing_id}
                                     title = {item.title}
                                     price = {item.price}
