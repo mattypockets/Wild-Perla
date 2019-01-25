@@ -26,21 +26,22 @@ class Store extends React.Component {
 
     render() {
         return(
-        <ul>
-            {this.state.items.map(item=> (
-                <div>
-                <li>
-                    {item.title}
-                </li>
-                <li>
-                    <p>{item.description}</p>
-                </li>
-                <li>
-                    <a href={item.url}>Link</a>
-                </li>
-                </div>
-            ))}
-        </ul>
+            <div>
+                <Section>
+                    <div>
+                        <Columns>
+                            {this.state.items.map(item => (
+                                <ItemCard 
+                                    id = {item.listing_id}
+                                    title = {item.title}
+                                    price = {item.price}
+                                    link = {item.url}
+                                />
+                            ))}
+                        </Columns>
+                    </div>
+                </Section>
+            </div>
         )
     }
 }
