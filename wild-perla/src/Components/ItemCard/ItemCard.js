@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios';
 import { Column, Card, CardHeader, CardHeaderTitle, Title, CardImage, Image, CardContent, Content } from 'bloomer';
+import { Icon } from "bloomer/lib/elements/Icon";
 
 class ItemCard extends React.Component {
     constructor(props) {
@@ -43,8 +44,8 @@ class ItemCard extends React.Component {
     
                 <CardContent>
                     <Content>
-                        <p>Price: <span>&#36</span> { this.props.price }</p>
-                        <p>{ this.props.description }</p>
+                        <p>Price: ${ this.props.price }</p>
+                        <div dangerouslySetInnerHTML={{ __html: this.props.description}}></div>
                    </Content>
                 </CardContent>
             </Card>
