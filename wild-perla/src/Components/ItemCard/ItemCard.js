@@ -34,7 +34,7 @@ class ItemCard extends React.Component {
             <Card>
                 <CardHeader>
                     <CardHeaderTitle>
-                        <Title><span className="header" href={ this.props.link } dangerouslySetInnerHTML={{ __html: this.props.title}}></span></Title>
+                        <Title><a href={ this.props.link } target="_blank"><span className="header" dangerouslySetInnerHTML={{ __html: this.props.title}}></span></a></Title>
                     </CardHeaderTitle>
                 </CardHeader>
     
