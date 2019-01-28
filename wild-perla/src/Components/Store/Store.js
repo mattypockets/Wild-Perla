@@ -31,7 +31,7 @@ class Store extends React.Component {
             <div>
                 <Section>
                     <div>
-                        <Columns>
+                        <Columns isCentered className='is-multiline'>
                             {this.state.items.map(item => (
                                 <ItemCard 
                                     key = {item.listing_id}
@@ -39,6 +39,7 @@ class Store extends React.Component {
                                     title = {item.title}
                                     price = {item.price}
                                     link = {item.url}
+                                    description = {item.description}
                                 />
                             ))}
                         </Columns>

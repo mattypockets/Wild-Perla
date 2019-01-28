@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios';
-import { Image } from 'bloomer';
+import { Column, Card, CardHeader, CardHeaderTitle, Title, CardImage, Image, CardContent, Content } from 'bloomer';
 
 class ItemCard extends React.Component {
     constructor(props) {
@@ -9,13 +9,8 @@ class ItemCard extends React.Component {
             error: null,
             isLoaded: false,
             imgData: [{ }],
-            test: "This is a test"
         };
     }
-
-    
-
-    
 
     componentDidMount() {
         const api_key = process.env.REACT_APP_API_KEY;
@@ -33,10 +28,28 @@ class ItemCard extends React.Component {
 
     render() {
         return(
-            <div>
-                <Image isRatio='4:3' src={this.state.imgData[0].url_fullxfull} />
-                <p>{this.props.title}</p>
-            </div>
+
+        <Column isSize='1/4'>
+            <Card>
+                <CardHeader>
+                    <CardHeaderTitle>
+                        <Title><span className="header" href={ this.props.link }>{ this.props.title }</span></Title>
+                    </CardHeaderTitle>
+                </CardHeader>
+    
+                <CardImage>
+                    <Image isRatio='4:3' src={ this.state.imgData[0].url_fullxfull } />
+                </CardImage>
+    
+                <CardContent>
+                    <Content>
+                        <p>Price: <span>&#36</span> { this.props.price }</p>
+                        <p>{ this.props.description }</p>
+                   </Content>
+                </CardContent>
+            </Card>
+        </Column>
+    
         )
     }
 }
