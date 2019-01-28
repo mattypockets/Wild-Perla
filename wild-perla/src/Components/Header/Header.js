@@ -41,7 +41,7 @@ class Header extends React.Component  {
         <NavbarMenu isActive={this.state.isActive} onClick={this.clicky} className="mobileMenu">
 
             <NavbarItem className="mobileItem"><Link to='/about/'>About</Link></NavbarItem>
-            <NavbarItem className="mobileItem" href='https://www.etsy.com/Shop/WildPerla' target='_blank'>Shop</NavbarItem>
+            <NavbarItem className="mobileItem"><Link to='/store/'>Store</Link></NavbarItem>
             <NavbarItem className="mobileItem"><Link to='/contact/'>Contact</Link></NavbarItem>
 
         </NavbarMenu>   
