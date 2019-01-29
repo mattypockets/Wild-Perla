@@ -32,20 +32,15 @@ class ItemCard extends React.Component {
 
         <Column isSize='1/4'>
             <Card>
-                <CardHeader>
-                    <CardHeaderTitle>
-                        <Title><a href={ this.props.link } target="_blank"><span className="header" dangerouslySetInnerHTML={{ __html: this.props.title}}></span></a></Title>
-                    </CardHeaderTitle>
-                </CardHeader>
-    
+                    
                 <CardImage>
-                    <Image isRatio='4:3' src={ this.state.imgData[0].url_fullxfull } />
+                    <a href={ this.props.link } target="_blank"><Image isRatio='4:3' src={ this.state.imgData[0].url_fullxfull } /></a>
                 </CardImage>
     
                 <CardContent>
                     <Content>
+                        <a href={ this.props.link } target="_blank"><span dangerouslySetInnerHTML={{ __html: this.props.title}}></span></a>
                         <p>Price: ${ this.props.price }</p>
-                        <div dangerouslySetInnerHTML={{ __html: this.props.description}}></div>
                    </Content>
                 </CardContent>
             </Card>
