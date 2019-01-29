@@ -1,7 +1,7 @@
 import React from "react";
 import axios from 'axios';
-import { Column, Card, CardHeader, CardHeaderTitle, Title, CardImage, Image, CardContent, Content } from 'bloomer';
-import { Icon } from "bloomer/lib/elements/Icon";
+import { Column, Card, CardImage, Image, CardContent, Content } from 'bloomer';
+import './ItemCard.css'
 
 class ItemCard extends React.Component {
     constructor(props) {
@@ -31,7 +31,7 @@ class ItemCard extends React.Component {
         return(
 
         <Column isSize='1/4'>
-            <Card>
+            <Card className="itemCard">
                     
                 <CardImage>
                     <a href={ this.props.link } target="_blank"><Image isRatio='4:3' src={ this.state.imgData[0].url_fullxfull } /></a>
@@ -40,7 +40,7 @@ class ItemCard extends React.Component {
                 <CardContent>
                     <Content>
                         <a href={ this.props.link } target="_blank"><span dangerouslySetInnerHTML={{ __html: this.props.title}}></span></a>
-                        <p>Price: ${ this.props.price }</p>
+                        <p>${ this.props.price }</p>
                    </Content>
                 </CardContent>
             </Card>
