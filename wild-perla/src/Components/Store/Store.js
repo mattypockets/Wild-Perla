@@ -1,6 +1,6 @@
 import React from "react";
 import axios from 'axios';
-import { Section, Columns } from 'bloomer';
+import { Section, Columns, Container } from 'bloomer';
 import ItemCard from '../ItemCard';
 
 class Store extends React.Component {
@@ -28,7 +28,8 @@ class Store extends React.Component {
         return(
             <div>
                 <Section>
-                    <div>
+                    <Container>
+                        
                         <Columns isCentered className='is-multiline'>
                             {this.state.items.map(item => (
                                 <ItemCard 
@@ -41,7 +42,7 @@ class Store extends React.Component {
                                 />
                             ))}
                         </Columns>
-                    </div>
+                    </Container>
                 </Section>
             </div>
         )
