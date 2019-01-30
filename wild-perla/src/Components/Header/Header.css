@@ -45,6 +45,12 @@ a.navbar-item:hover {
 
 @media screen and (min-width: 1200px) {
     .navWrapper {
+        margin-left: 41%;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .navWrapper {
         margin-left: 42%;
     }
 }
